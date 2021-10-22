@@ -36,40 +36,42 @@ function Table() {
 
   return (
     <>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Email</th>
-            <th>Name</th>
-            <th>Wallet 1</th>
-            <th>Wallet 2</th>
-            <th>Wallet 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.filter((user) => filter.includes(user.type)).length > 0 ? (
-            users
-              .filter((user) => filter.includes(user.type))
-              .slice(PAGE_SIZE * page, PAGE_SIZE * page + PAGE_SIZE)
-              .map((user) => <UserRow key={user.index} user={user}></UserRow>)
-          ) : (
+      <div className={styles.tableWrap}>
+        <table className={styles.table}>
+          <thead>
             <tr>
-              <td
-                colSpan={6}
-                style={{
-                  textAlign: 'center',
-                  fontSize: '0.8em',
-                  color: '#666',
-                  fontStyle: 'italic',
-                }}
-              >
-                No Users Found
-              </td>
+              <th>#</th>
+              <th>Email</th>
+              <th>Name</th>
+              <th>Wallet 1</th>
+              <th>Wallet 2</th>
+              <th>Wallet 3</th>
             </tr>
-          )}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.filter((user) => filter.includes(user.type)).length > 0 ? (
+              users
+                .filter((user) => filter.includes(user.type))
+                .slice(PAGE_SIZE * page, PAGE_SIZE * page + PAGE_SIZE)
+                .map((user) => <UserRow key={user.index} user={user}></UserRow>)
+            ) : (
+              <tr>
+                <td
+                  colSpan={6}
+                  style={{
+                    textAlign: 'center',
+                    fontSize: '0.8em',
+                    color: '#666',
+                    fontStyle: 'italic',
+                  }}
+                >
+                  No Users Found
+                </td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
       <Paginator
         page={page}
         setPage={setPage}

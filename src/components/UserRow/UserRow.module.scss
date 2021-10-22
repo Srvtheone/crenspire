@@ -70,10 +70,10 @@
 }
 
 .row:hover {
-  transform: scale(1.03);
-  background-color: #222;
+  background-color: rgb(216, 216, 216);
+  cursor: pointer;
 
   td {
-    color: #fff;
+    color: #222;
   }
 }

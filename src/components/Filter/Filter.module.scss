@@ -3,6 +3,7 @@
   max-width: 940px;
   margin: 1em auto;
   padding: 0 2em;
+  // min-width: 600px;
 
   ul {
     display: flex;
@@ -14,16 +15,29 @@
     }
 
     li {
+      min-width: 80px;
       padding-bottom: 0.2em;
       border-bottom: 4px solid;
       color: #333;
       font-size: 0.8em;
       display: flex;
       align-items: center;
+      margin-right: 2em;
 
       label {
         margin-left: 0.4em;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .filter {
+    padding: 0 1em;
+    overflow-x: auto;
+
+    ul {
+      flex-wrap: nowrap;
     }
   }
 }
