@@ -1,0 +1,29 @@
+.filter {
+  width: 100%;
+  max-width: 940px;
+  margin: 1em auto;
+  padding: 0 2em;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+
+    li:first-of-type {
+      border-bottom: none;
+    }
+
+    li {
+      padding-bottom: 0.2em;
+      border-bottom: 4px solid;
+      color: #333;
+      font-size: 0.8em;
+      display: flex;
+      align-items: center;
+
+      label {
+        margin-left: 0.4em;
+      }
+    }
+  }
+}

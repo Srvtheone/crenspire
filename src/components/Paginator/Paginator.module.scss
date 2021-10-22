@@ -1,0 +1,35 @@
+.paginator {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.paginator > div {
+  font-size: 1.5rem;
+  color: #999;
+  font-weight: 700;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.paginator span:first-of-type {
+  color: coral;
+  font-size: 1.3rem;
+  text-align: center;
+  width: 20px;
+  display: inline-block;
+}
+.paginator button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.08s ease-in;
+}
+
+.paginator button:hover {
+  transform: scale(1.2);
+}
